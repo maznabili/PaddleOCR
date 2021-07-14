@@ -1,14 +1,27 @@
 [English](README.md) | 简体中文
 
+------------------------------------------------------------------------------------------
+
+<p align="left">
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/releases"><img src="https://img.shields.io/github/v/release/PaddlePaddle/PaddleOCR?color=ffa"></a>
+    <a href=""><img src="https://img.shields.io/badge/python-3.7+-aff.svg"></a>
+    <a href=""><img src="https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg"></a>
+    <a href=""><img src="https://img.shields.io/pypi/format/PaddleOCR?color=c77"></a>
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/graphs/contributors"><img src="https://img.shields.io/github/contributors/PaddlePaddle/PaddleOCR?color=9ea"></a>
+    <a href="https://pypi.org/project/PaddleOCR/"><img src="https://img.shields.io/pypi/dm/PaddleOCR?color=9cf"></a>
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/stargazers"><img src="https://img.shields.io/github/stars/PaddlePaddle/PaddleOCR?color=ccf"></a>
+</p>
+
 ## 简介
 PaddleOCR旨在打造一套丰富、领先、且实用的OCR工具库，助力使用者训练出更好的模型，并应用落地。
 ## 注意
 PaddleOCR同时支持动态图与静态图两种编程范式
-- 动态图版本：release/2.1（默认分支，开发分支为dygraph分支），需将paddle版本升级至2.0.0（[快速安装](./doc/doc_ch/installation.md)）
+- 动态图版本：release/2.1（默认分支，开发分支为dygraph分支），需将paddle版本升级至2.0.0或以上版本（[快速安装](./doc/doc_ch/installation.md)）
 - 静态图版本：develop分支
 
 **近期更新**
-- 2021.5.11 [FAQ](./doc/doc_ch/FAQ.md)新增5个高频问题，总数218个，每周一都会更新，欢迎大家持续关注。
+- 2021.6.29 [FAQ](./doc/doc_ch/FAQ.md)新增5个高频问题，总数248个，每周一都会更新，欢迎大家持续关注。
 - PaddleOCR研发团队对最新发版内容技术深入解读，4月13日晚上19:00，[直播地址](https://live.bilibili.com/21689802)。
 - 2021.4.8 release 2.1版本，新增AAAI 2021论文[端到端识别算法PGNet](./doc/doc_ch/pgnet.md)开源，[多语言模型](./doc/doc_ch/multi_languages.md)支持种类增加到80+。
 - 2021.2.8 正式发布PaddleOCRv2.0(branch release/2.0)并设置为推荐用户使用的默认分支. 发布的详细内容，请参考: https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v2.0.0
@@ -90,7 +103,7 @@ PaddleOCR同时支持动态图与静态图两种编程范式
     - [基于Python脚本预测引擎推理](./doc/doc_ch/inference.md)
     - [基于C++预测引擎推理](./deploy/cpp_infer/readme.md)
     - [服务化部署](./deploy/hubserving/readme.md)
-    - [端侧部署](https://github.com/PaddlePaddle/PaddleOCR/blob/develop/deploy/lite/readme.md)
+    - [端侧部署](./deploy/lite/readme.md)
     - [Benchmark](./doc/doc_ch/benchmark.md)
 - 数据集
     - [通用中英文OCR数据集](./doc/doc_ch/datasets.md)
@@ -104,8 +117,8 @@ PaddleOCR同时支持动态图与静态图两种编程范式
 - [效果展示](#效果展示)
 - FAQ
     - [【精选】OCR精选10个问题](./doc/doc_ch/FAQ.md)
-    - [【理论篇】OCR通用41个问题](./doc/doc_ch/FAQ.md)
-    - [【实战篇】PaddleOCR实战147个问题](./doc/doc_ch/FAQ.md)
+    - [【理论篇】OCR通用50个问题](./doc/doc_ch/FAQ.md)
+    - [【实战篇】PaddleOCR实战183个问题](./doc/doc_ch/FAQ.md)
 - [技术交流群](#欢迎加入PaddleOCR技术交流群)
 - [参考文献](./doc/doc_ch/reference.md)
 - [许可证书](#许可证书)

@@ -6,7 +6,7 @@ paddle-lite is a lightweight inference engine for PaddlePaddle. It provides effi
 
 ## 1. Preparation
 
-### 运行准备
+### Preparation environment
 
 - Computer (for Compiling Paddle Lite)
 - Mobile phone (arm7 or arm8)
@@ -87,8 +87,8 @@ The following table also provides a series of models that can be deployed on mob
 
 |Version|Introduction|Model size|Detection model|Text Direction model|Recognition model|Paddle-Lite branch|
 |---|---|---|---|---|---|---|
-|V2.0|extra-lightweight chinese OCR optimized model|7.8M|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_det_opt.nb)|[download lin](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_cls_opt.nb)|[download lin](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_rec_opt.nb)|v2.9|
-|V2.0(slim)|extra-lightweight chinese OCR optimized model|3.3M|[下载地址](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_det_slim_opt.nb)|[下载地址](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_cls_slim_opt.nb)|[下载地址](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_rec_slim_opt.nb)|v2.9|
+|V2.0|extra-lightweight chinese OCR optimized model|7.8M|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_det_opt.nb)|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_cls_opt.nb)|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_rec_opt.nb)|v2.9|
+|V2.0(slim)|extra-lightweight chinese OCR optimized model|3.3M|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_det_slim_opt.nb)|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_cls_slim_opt.nb)|[download link](https://paddleocr.bj.bcebos.com/dygraph_v2.0/lite/ch_ppocr_mobile_v2.0_rec_slim_opt.nb)|v2.9|
 
 If you directly use the model in the above table for deployment, you can skip the following steps and directly read [Section 2.2](#2.2 Run optimized model on Phone).
 
@@ -222,6 +222,7 @@ dict/japan_dict.txt      # japan
 dict/korean_dict.txt     # korean
 ppocr_keys_v1.txt   # chinese
 ```
+For more language model and dictionary file correspondence, please refer to [Document](../../doc/doc_en/multi_languages_en.md#inference)
 
 2.  `config.txt` of the detector and classifier, as shown below:
 ```
@@ -237,7 +238,8 @@ use_direction_classify  0  # Whether to use the direction classifier, 0 means no
 After the above steps are completed, you can use adb to push the file to the phone to run, the steps are as follows:
 
  ```
- # Execute the compilation and get the executable file ocr_db_crnn
+ # Execute the compilation and get the executable file ocr_db_crnn.
+ # The first execution of this command will download dependent libraries such as opencv. After the download is complete, you need to execute it again
  make -j
  # Move the compiled executable file to the debug folder
  mv ocr_db_crnn ./debug/
